@@ -420,6 +420,11 @@ for opt do
         signing_request_signatures=true
         CPPFLAGS="-DMY_SIGNING_GW_REQUEST_SIGNATURES_FROM_ALL $CPPFLAGS"
         ;;
+	--my-mqtt-user=) CPPFLAGS="-DMY_MQTT_USER=\"${optarg}\" $CPPFLAGS" ;;
+	--my-mqtt-password=) CPPFLAGS="-DMY_MQTT_PASSWORD=\"${optarg}\" $CPPFLAGS" ;; 
+	
+	
+	
     *)
         echo "[WARNING] Unknown option detected:$opt, ignored"
         ;;
